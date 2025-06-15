@@ -28,25 +28,23 @@ const scrollToSection = (sectionId: string): void => {
 };
 
   return (
-   <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm px-6 py-5 shadow-md">
-
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm px-4 py-3 shadow-md">
       <div className="max-w-6xl mx-auto flex items-center justify-between">
-
         {/* Brand */}
         <button
           onClick={() => scrollToSection('home')}
-          className="text-2xl font-extrabold text-orange-600 hover:text-orange-700 transition"
+          className="text-xl font-extrabold text-orange-600 hover:text-orange-700 transition"
         >
-          4C Haircare KE
+          4C Haircare KE
         </button>
 
         {/* Mobile menu toggle */}
         <button
-          className="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400"
+          className="md:hidden p-1.5 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
-          <svg className="w-6 h-6 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg className="w-5 h-5 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path d="M4 6h16M4 12h16M4 18h16" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} />
           </svg>
         </button>
@@ -64,18 +62,18 @@ const scrollToSection = (sectionId: string): void => {
           bg-white/90
           backdrop-blur-sm
           md:bg-transparent 
-          p-4 
+          p-3
           md:p-0 
           md:ml-auto
           shadow-lg
           md:shadow-none
         `}>
-          <div className="flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-8">
+          <div className="flex flex-col md:flex-row items-start md:items-center space-y-3 md:space-y-0 md:space-x-6">
             {navItems.map(item => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`relative text-gray-900 hover:text-orange-600 transition w-full md:w-auto text-left ${
+                className={`relative text-sm text-gray-900 hover:text-orange-600 transition w-full md:w-auto text-left ${
                   active === item.id ? 'font-semibold' : 'font-medium'
                 }`}
               >
@@ -90,7 +88,7 @@ const scrollToSection = (sectionId: string): void => {
             {/* CTA Button */}
             <button
               onClick={() => scrollToSection('community')}
-              className="bg-orange-600 text-white px-5 py-2 rounded-full hover:bg-orange-700 transition w-full md:w-auto"
+              className="bg-orange-600 text-white px-4 py-1.5 rounded-full hover:bg-orange-700 transition w-full md:w-auto text-sm"
             >
               Join Community
             </button>

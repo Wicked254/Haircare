@@ -11,10 +11,10 @@ import ScrollButtons from '~/components/ScrollButton';
 
 export default function Home() {
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen">
       <Navbar />
-      <main className="pt-24 md:pt-20 space-y-16">
-        <section id="home" className="-mt-24 md:-mt-20 pt-24 md:pt-20">
+      <main>
+        <section id="home">
           <Hero />
         </section>
         
