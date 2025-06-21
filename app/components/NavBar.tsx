@@ -96,7 +96,7 @@ const scrollToSection = (sectionId: string): void => {
             {/* CTA Button */}
             <button
               onClick={() => scrollToSection('community')}
-              className="bg-yellow-600 text-white px-5 py-2 rounded-full hover:bg-orange-700 transition w-full md:w-auto"
+              className="bg-yellow-600 text-white px-5 py-2 rounded-full hover:bg-yellow-700 transition w-full md:w-auto"
             >
               Join Community
             </button>
