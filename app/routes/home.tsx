@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className="min-h-screen relative">
       <Navbar />
-      <main className="pt-24 md:pt-20 space-y-16">
+      <main className="pt-24 md:pt-20">
         <section id="home" className="-mt-24 md:-mt-20 pt-24 md:pt-20">
           <Hero />
         </section>

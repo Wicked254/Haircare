@@ -27,7 +27,7 @@ export default function ScrollButtons() {
         <button
           onClick={scrollToTop}
           aria-label="Scroll to top"
-          className="p-3 rounded-full bg-orange-600 text-white shadow-lg hover:bg-orange-700 transition"
+          className="p-3 rounded-full bg-yellow-600 text-white shadow-lg hover:bg-yellow-700 transition"
         >
           <FaArrowUp />
         </button>
@@ -36,7 +36,7 @@ export default function ScrollButtons() {
         <button
           onClick={scrollToBottom}
           aria-label="Scroll to bottom"
-          className="p-3 rounded-full bg-orange-600 text-white shadow-lg hover:bg-orange-700 transition"
+          className="p-3 rounded-full bg-yellow-600 text-white shadow-lg hover:bg-yellow-700 transition"
         >
           <FaArrowDown />
         </button>
