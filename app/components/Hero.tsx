@@ -3,15 +3,15 @@ import React from 'react';
 export default function Hero() {
   return (
     <section
-      className="pt-20 relative z-0 flex flex-col justify-center items-center h-screen bg-gradient-to-b from-orange-50 to-white"
+      className="pt-20 relative z-0 flex flex-col justify-center items-center min-h-screen bg-gradient-to-b from-orange-50 to-white"
       style={{
-        backgroundImage: "url('/images/4c-texture.jpg')",
+        backgroundImage: "url('/components/assets/Natural.png')", 
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
     >
-      {/* Soft orange overlay */}
-      <div className="absolute inset-0 bg-orange-400 opacity-30"></div>
+      {/* Soft yellow overlay */}
+      <div className="absolute inset-0 bg-yellow-400 opacity-30"></div>
 
       <div className="relative z-10 text-center px-4 max-w-2xl">
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -23,10 +23,10 @@ export default function Hero() {
 
         {/* CTA buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-full transition">
+          <button className="bg-yellow-600 hover:bg-yellow-700 text-white px-8 py-3 rounded-full transition">
             Get Free Hair Planner
           </button>
-          <button className="border-2 border-orange-600 text-orange-600 px-8 py-3 rounded-full hover:bg-orange-100 transition">
+          <button className="border-2 border-yellow-600 text-yellow-600 px-8 py-3 rounded-full hover:bg-yellow-100 transition">
             Join Community
           </button>
         </div>
@@ -46,5 +46,5 @@ export default function Hero() {
         </div>
       </div>
     </section>
-);
+  );
 }

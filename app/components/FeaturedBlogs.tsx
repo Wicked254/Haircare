@@ -3,30 +3,30 @@ import React from "react";
 
 const samplePosts = [
   {
-    title: "How I Grew 5 Inches in 6 Months",
-    image: "/images.jpeg", // Updated image path
-    category: "My Hair Journey",
-    link: "/blog/my-hair-journey",
+    title: "Natural Hair Care: Exploring The Benefits Of Garlic And Olive Oil",
+    image: "/components/assets/Haircareolive.jpg",
+    category: "Product Reviews",
+    link: "https://kenya.hsmagazine.digital/natural-hair-care-exploring-the-benefits-of-garlic-and-olive-oil/", // <-- updated link
   },
   {
-    title: "Budget-Friendly Products You Can Find in Nairobi",
-    image: "/path-to-image2.jpg",
-    category: "Budget Finds",
-    link: "/blog/budget-finds",
+    title: "Secrets To Perfect Long, Healthy African Hair: The Ultimate Guide",
+    image: "/components/assets/SecretsToPerfectLongHair.jpg",
+    category: "Health and Beauty",
+    link: "https://kenya.hsmagazine.digital/secrets-to-perfect-long-healthy-african-hair-the-ultimate-guide/",
   },
   {
-    title: "DIY Deep Conditioning Recipes",
-    image: "/path-to-image3.jpg",
-    category: "DIY Recipes",
-    link: "/blog/diy-recipes",
+    title: "The Best Hair Care Routine for Type 4 Hair",
+    image: "/components/assets/Routine.jpg",
+    category: "Routines",
+    link: "https://www.luxyhair.com/blogs/hair-blog/natural-hair-care-routine?srsltid=AfmBOoregb2PJ7gX3s7pSOcnUBOAuHNBH07ugxjs16IxsWwKOjPifilV&em-bypass=server",
   }
 ];
 
 export default function FeaturedBlogs() {
   return (
-    <section className="py-12 bg-orange-50">
+    <section className="py-12 bg-yellow-50">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-orange-900 mb-8">
+        <h2 className="text-3xl font-bold text-yellow-900 mb-8">
           Latest Hair Care Tips
         </h2>
 
@@ -45,10 +45,10 @@ export default function FeaturedBlogs() {
                 />
               </div>
               <div className="p-6">
-                <span className="text-sm font-medium text-orange-600">
+                <span className="text-sm font-medium text-yellow-600">
                   {post.category}
                 </span>
-                <h3 className="mt-2 text-xl font-semibold text-gray-900 group-hover:text-orange-600 transition-colors">
+                <h3 className="mt-2 text-xl font-semibold text-gray-900 group-hover:text-yellow-600 transition-colors">
                   {post.title}
                 </h3>
               </div>
