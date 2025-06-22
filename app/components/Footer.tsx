@@ -2,6 +2,21 @@
 import React from 'react';
 import { FaFacebook, FaInstagram, FaTwitter, FaWhatsapp } from 'react-icons/fa';
 
+const navSections = [
+  { id: 'home', label: 'Home' },
+  { id: 'featured-blogs', label: 'Blog' },
+  { id: 'hair-school', label: 'Hair School' },
+  { id: 'product-reviews', label: 'Product Reviews' },
+  { id: 'community', label: 'Community' },
+];
+
+function scrollToSection(sectionId: string) {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
 export default function Footer() {
   return (
     <footer className="bg-yellow-50 text-gray-700 pt-10">
@@ -17,11 +32,15 @@ export default function Footer() {
         <div>
           <h3 className="font-semibold mb-2 text-yellow-800">Explore</h3>
           <ul className="space-y-1">
-            {['Home','Blog','Hair School','Product Reviews','Community'].map((page) => (
-              <li key={page}>
-                <a href={`/${page.toLowerCase().replace(' ', '-')}`} className="hover:text-yellow-600 transition-colors">
-                  {page}
-                </a>
+            {navSections.map((page) => (
+              <li key={page.id}>
+                <button
+                  type="button"
+                  onClick={() => scrollToSection(page.id)}
+                  className="hover:text-yellow-600 transition-colors bg-transparent border-none p-0 m-0 text-left cursor-pointer"
+                >
+                  {page.label}
+                </button>
               </li>
             ))}
           </ul>
@@ -62,10 +81,10 @@ export default function Footer() {
 
       </div>
 
-      <div className="mt-10 border-t border-orange-200 py-6 text-center text-sm text-gray-600">
+      <div className="mt-10 border-t border-yellow-200 py-6 text-center text-sm text-gray-600">
         © {new Date().getFullYear()} 4C Haircare KE •{' '}
-        <a href="/privacy" className="hover:text-orange-600 transition-colors">Privacy</a> &amp;{' '}
-        <a href="/terms" className="hover:text-orange-600 transition-colors">Terms</a>
+        <a href="/privacy" className="hover:text-yellow-600 transition-colors">Privacy</a> &amp;{' '}
+        <a href="/terms" className="hover:text-yellow-600 transition-colors">Terms</a>
       </div>
     </footer>
   );
