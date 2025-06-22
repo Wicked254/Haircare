@@ -28,7 +28,7 @@ const scrollToSection = (sectionId: string): void => {
 };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm px-6 py-5 shadow-md">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm px-6 py-3 shadow-md">
       <div className="max-w-6xl mx-auto flex items-center justify-between">
 
         {/* Brand with logo */}

@@ -3,7 +3,7 @@ import React from 'react';
 export default function Hero() {
   return (
     <section
-      className="pt-20 relative z-0 flex flex-col justify-center items-center min-h-screen bg-gradient-to-b from-orange-50 to-white"
+      className="relative z-0 flex flex-col justify-center items-center min-h-screen bg-gradient-to-b from-orange-50 to-white pt-20"
       style={{
         backgroundImage: "url('/components/assets/Natural.png')", 
         backgroundSize: 'cover',
