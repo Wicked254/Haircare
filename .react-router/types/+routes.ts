@@ -13,15 +13,22 @@ type Pages = {
   "/": {
     params: {};
   };
+  "/hair-types": {
+    params: {};
+  };
 };
 
 type RouteFiles = {
   "root.tsx": {
     id: "root";
-    page: "/";
+    page: "/" | "/hair-types";
   };
   "routes/home.tsx": {
     id: "routes/home";
     page: "/";
+  };
+  "routes/hair-types.tsx": {
+    id: "routes/hair-types";
+    page: "/hair-types";
   };
 };
