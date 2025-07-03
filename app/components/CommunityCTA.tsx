@@ -4,9 +4,9 @@ export default function CommunityCTA() {
   return (
     <section className="py-16 bg-gradient-to-r from-yellow-500 to-yellow-700 text-white text-center">
       <div className="max-w-xl mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-4">Join the Nywele Nation Community</h2>
+        <h2 className="text-3xl font-bold mb-4">Community</h2>
         <p className="mb-6 text-lg">
-          Take part in monthly challenges, polls, and share your journey.
+          From tears to tiaras: your hair, your story. Share it.
         </p>
         <a
           href="/community"
@@ -16,5 +16,5 @@ export default function CommunityCTA() {
         </a>
       </div>
     </section>
-);
+  );
 }
