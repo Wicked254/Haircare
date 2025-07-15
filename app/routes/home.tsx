@@ -1,5 +1,6 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route as RouterRoute } from 'react-router-dom';
+import { generateMetaTags, seoData } from '../utils/seo';
 import Navbar from '../components/NavBar';
 import Hero from '../components/Hero';
 import FeaturedBlogs from '../components/FeaturedBlogs';
@@ -11,39 +12,43 @@ import Footer from '../components/Footer';
 import ScrollButtons from '~/components/ScrollButton';
 import HairTypes from '../components/HairTypes';
 
+export const meta = () => {
+  return generateMetaTags(seoData.home);
+};
+
 export default function Home() {
   return (
     <div className="min-h-screen relative">
       <Navbar />
-      <main>
-        <section id="home">
+      <main role="main">
+        <section id="home" aria-labelledby="hero-heading">
           <Hero />
         </section>
         
-        <section id="featured-blogs">
+        <section id="featured-blogs" aria-labelledby="blogs-heading">
           <FeaturedBlogs />
         </section>
         
-        <section id="hair-school">
+        <section id="hair-school" aria-labelledby="school-heading">
           <HairSchoolPreview />
         </section>
         
-        <section id="product-reviews">
+        <section id="product-reviews" aria-labelledby="reviews-heading">
           <ProductReviewsPreview />
         </section>
         
-        <section id="community">
+        <section id="community" aria-labelledby="community-heading">
           <CommunityCTA />
         </section>
         
-        <section id="about">
+        <section id="about" aria-labelledby="about-heading">
           <AboutPreview />
         </section>
       </main>
       <Footer />
       <ScrollButtons />
       <Routes>
-        <Route path="/hair-types" element={<HairTypes />} />
+        <RouterRoute path="/hair-types/*" element={<HairTypes />} />
       </Routes>
     </div>
   );

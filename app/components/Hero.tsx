@@ -19,6 +19,8 @@ export default function Hero() {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
+      role="banner"
+      aria-label="Nywele Nation hero section showcasing natural 4C hair care community"
     >
       <div className="absolute inset-0 bg-black/40 z-0"></div>
 
@@ -56,6 +58,7 @@ export default function Hero() {
         </AnimatePresence>
 
         <motion.h1
+          id="hero-heading"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1 }}

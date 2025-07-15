@@ -159,8 +159,9 @@ export default function HairTypes() {
 						>
 							<img
 								src={item.img}
-								alt={item.type}
+								alt={`${item.type} hair texture example showing ${item.description.toLowerCase()}`}
 								className="w-full h-60 object-cover"
+								loading="lazy"
 							/>
 							<div className="p-6">
 								<h2 className="text-2xl font-bold text-yellow-800 mb-2">

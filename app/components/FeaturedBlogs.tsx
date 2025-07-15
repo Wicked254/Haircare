@@ -25,7 +25,7 @@ export default function FeaturedBlogs() {
   return (
     <section className="py-12 bg-yellow-50">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-yellow-900 mb-8">
+        <h2 id="blogs-heading" className="text-3xl font-bold text-yellow-900 mb-8">
           Latest Hair Care Tips
         </h2>
 
@@ -42,8 +42,9 @@ export default function FeaturedBlogs() {
               <div className="aspect-video overflow-hidden">
                 <img
                   src={post.image}
-                  alt={post.title}
+                  alt={`${post.title} - ${post.category} article thumbnail`}
                   className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
                 />
               </div>
               <div className="p-6">
@@ -71,8 +72,9 @@ export default function FeaturedBlogs() {
               <div className="aspect-video overflow-hidden">
                 <img
                   src={post.image}
-                  alt={post.title}
+                  alt={`${post.title} - ${post.category} article thumbnail`}
                   className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
                 />
               </div>
               <div className="p-6">
