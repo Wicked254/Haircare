@@ -24,11 +24,42 @@ export const links: Route.LinksFunction = () => [
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Nywele Nation",
+    "description": "Natural hair care community for Kenyan women with 4C hair",
+    "url": "https://nywelenation.co.ke",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://nywelenation.co.ke/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Nywele Nation",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://nywelenation.co.ke/components/assets/NyweleNationLogo.jpg"
+      }
+    },
+    "sameAs": [
+      "https://instagram.com/nywelenation",
+      "https://facebook.com/nywelenation"
+    ]
+  };
+
   return (
-    <html lang="en">
+    <html lang="en-KE">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#D97706" />
+        <link rel="canonical" href="https://nywelenation.co.ke" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
         <Meta />
         <Links />
       </head>
